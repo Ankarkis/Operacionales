@@ -1,3 +1,0 @@
-# Operacionales
-
-### taller 2
