@@ -9,6 +9,9 @@
 
 ## 3. Describa las acciones que toma el kernel para el cambio de contexto entre procesos.
 - detecta que un proceso ha terminado o necesita ceder la CPU a otro proceso, es el encargado de guardar el contexto actual del proceso en el PCB y restaurar el contexto del próximo proceso que va a ejecutar.
+## 4. Defina las ventajas y desventajas desde el punto de vista del programador 
+para comunicación síncrona y asíncrona.
+
 
 
 ## 7. Describa los estados de un proceso.
