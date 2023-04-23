@@ -4,9 +4,9 @@
 ## 1. En entornos compartidos, los usuarios comparten el sistema. Esto puede dar lugar a varios problemas de seguridad.
 - Mencione dos problemas y explíquelos.
 ### Dos problemas comunes podrían ser:
-**- Acceso no autorizado:** ya que en un sistema compartido, cualquier usuario puede tener acceso a los archivos y recursos del sistema, lo que aumenta el riesgo de que cualquier persona pueda acceder a información de gran importancia modificarla y hasta eliminarla en su defecto.
+***- Acceso no autorizado:*** ya que en un sistema compartido, cualquier usuario puede tener acceso a los archivos y recursos del sistema, lo que aumenta el riesgo de que cualquier persona pueda acceder a información de gran importancia modificarla y hasta eliminarla en su defecto.
 
-**- Malware y virus:** Cualquier usuario puede introducir malware o virus en el sistema a través descargas o dispositivos externos con lo cual esto puede poner en riesgo la seguridad de los datos y programas del sistema y afectar a los otros usuarios.
+***- Malware y virus:*** Cualquier usuario puede introducir malware o virus en el sistema a través descargas o dispositivos externos con lo cual esto puede poner en riesgo la seguridad de los datos y programas del sistema y afectar a los otros usuarios.
 
 - Es posible asegurar el mismo grado de seguridad en un sistema compartido que en un sistema dedicado. Explique su respuesta.
 - depende del nivel de seguridad requerido. Aunque es más difícil garantizar la seguridad en un entorno compartido ya que como son varios usuarios puede que alguno de ellos no tenga conocimientos con respecto a los programas infectados o virus y este infecte a todo el sistema.
