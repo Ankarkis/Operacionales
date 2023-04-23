@@ -11,11 +11,6 @@
 - detecta que un proceso ha terminado o necesita ceder la CPU a otro proceso, es el encargado de guardar el contexto actual del proceso en el PCB y restaurar el contexto del próximo proceso que va a ejecutar.
 
 
-
-
-
-
-
 ## 7. Describa los estados de un proceso.
 ***- Nuevo:*** El proceso se encuentra en este estado cuando está siendo creado por 
 el sistema operativo. Durante este estado, el sistema operativo asigna los recursos 
