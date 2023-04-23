@@ -1,7 +1,8 @@
 # Investigación 02
 ## Para investigar:
+
 ## 1. En entornos compartidos, los usuarios comparten el sistema. Esto puede dar lugar a varios problemas de seguridad.
-◦ Mencione dos problemas y explíquelos.
+- Mencione dos problemas y explíquelos.
 ### Dos problemas comunes podrían ser:
 **- Acceso no autorizado:** ya que en un sistema compartido, cualquier usuario puede tener acceso a los archivos y recursos del sistema, lo que aumenta el riesgo de que cualquier persona pueda acceder a información de gran importancia modificarla y hasta eliminarla en su defecto.
 
@@ -9,6 +10,7 @@
 
 - Es posible asegurar el mismo grado de seguridad en un sistema compartido que en un sistema dedicado. Explique su respuesta.
 - depende del nivel de seguridad requerido. Aunque es más difícil garantizar la seguridad en un entorno compartido ya que como son varios usuarios puede que alguno de ellos no tenga conocimientos con respecto a los programas infectados o virus y este infecte a todo el sistema.
+
 ## 2. Un problema común en los OS es la utilización de recursos. Enumere los recursos que deben gestionarse en las siguientes maquina (explique porqué):
 
 ***- Sistemas embebidos***
