@@ -87,7 +87,5 @@ I/O asignados al proceso, lista de archivos abiertos, etc.
 - El modelo Cliente-Servidor es como una conversación entre dos 
 amigos en la que uno pide un favor al otro y el otro lo cumple. En 
 este caso, el cliente pide algo al servidor, y el servidor responde con 
-lo que se le ha pedido. Este modelo se utiliza en aplicaciones como 
-navegación web, correo electrónico, transacciones bancarias en 
-línea, y videojuegos en línea. Es fácilmente adaptable y permite que 
+lo que se le ha pedido. Este modelo se utiliza en aplicaciones como videojuegos en línea. Es fácilmente adaptable y permite que 
 los amigos estén en diferentes lugares
