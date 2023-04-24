@@ -1,6 +1,4 @@
-# Operacionales
-
-## Asignatura: ***Sistemas Operacionales***
+# ***Sistemas Operacionales***
 
 - Docente: ***Pablo Josue Rojas Yepez***
 
