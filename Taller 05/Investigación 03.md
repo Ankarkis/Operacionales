@@ -9,8 +9,23 @@
 
 ## 3. Describa las acciones que toma el kernel para el cambio de contexto entre procesos.
 - detecta que un proceso ha terminado o necesita ceder la CPU a otro proceso, es el encargado de guardar el contexto actual del proceso en el PCB y restaurar el contexto del próximo proceso que va a ejecutar.
-## 4. Defina las ventajas y desventajas desde el punto de vista del programador 
-para comunicación síncrona y asíncrona.
+## 4. Defina las ventajas y desventajas desde el punto de vista del programador para comunicación síncrona y asíncrona.
+| Tipo de Comunicación | Ventajas                                                     | Desventajas                                                                                                 |
+| --------------------| ------------------------------------------------------------| -----------------------------------------------------------------------------------------------------------|
+| Comunicación Sincrónica | Permite una interacción rápida y fluida entre las personas involucradas. Permite una mayor claridad y comprensión en las discusiones ya que los participantes pueden interactuar en tiempo real. Facilita la toma de decisiones en tiempo real. | Puede ser difícil de coordinar debido a las diferencias de tiempo y ubicación. Puede haber problemas de conectividad o tecnología, lo que puede afectar la calidad de la comunicación. Puede haber distracciones o interrupciones que afecten la interacción. |
+| Comunicación Asincrónica | Permite a los participantes comunicarse sin tener que coordinar sus horarios. Los participantes pueden responder a su propio ritmo, lo que les permite dedicar tiempo a reflexionar antes de responder. Permite que los participantes puedan involucrarse en la comunicación desde cualquier lugar y en cualquier momento. | La falta de interacción en tiempo real puede llevar a malentendidos y una falta de claridad en la discusión. Los participantes también pueden ignorar o retrasar sus respuestas, lo que puede ralentizar el proceso de comunicación. Puede haber una falta de retroalimentación inmediata, lo que puede ser un obstáculo para la toma de decisiones y la resolución de problemas. |
+
+## 5. Defina las ventajas y desventajas desde el punto de vista del OS para envío por copia y envío por referencia.
+| Tipo de Envío | Ventajas | Desventajas |
+| :----------- | :------ | :---------- |
+| Envío por Copia | Crea una copia independiente de la información, lo que puede proteger la información original de cambios no deseados. Es más fácil de entender y predecir el comportamiento del programa. Es más seguro en entornos de programación donde se necesite evitar el acceso no autorizado a la información. | Puede ser ineficiente para grandes cantidades de datos y costoso en términos de memoria. No es adecuado para estructuras de datos complejas. Puede ser lento para copiar grandes cantidades de datos. |
+| Envío por Referencia | Es más eficiente en términos de memoria. Permite la creación de programas más flexibles y dinámicos. Es más adecuado para estructuras de datos complejas. | Puede ser difícil de entender y predecir el comportamiento del programa. Puede aumentar la probabilidad de errores y problemas de seguridad. Puede ser más difícil de depurar y rastrear problemas de programación. |
+
+## 6. Defina las ventajas y desventajas desde el punto de vista del OS para mensajes de tamaño fijo y de tamaño variable.
+| Tipo de Mensaje | Ventajas | Desventajas |
+| :------------- | :------ | :---------- |
+| Mensajes de Tamaño Fijo | Son más fáciles de implementar y entender en comparación con los mensajes de tamaño variable. Permiten la asignación eficiente de memoria y la optimización de recursos. Son más adecuados para sistemas en los que la estructura de los datos transmitidos no cambia con el tiempo. | Pueden desperdiciar espacio en memoria si el tamaño del mensaje es mucho menor que el tamaño máximo permitido. No son adecuados para sistemas en los que la longitud de los datos transmitidos varía significativamente. No son lo suficientemente flexibles para adaptarse a cambios futuros en la estructura de los datos transmitidos. |
+| Mensajes de Tamaño Variable | Son más adecuados para sistemas en los que la longitud de los datos transmitidos varía significativamente. Permiten una mayor flexibilidad y adaptabilidad a cambios futuros en la estructura de los datos transmitidos. Son más eficientes en términos de uso de memoria cuando la longitud del mensaje es menor que el tamaño máximo permitido. | Son más difíciles de implementar y entender que los mensajes de tamaño fijo. Pueden requerir una asignación de memoria más costosa y complicada. Pueden ser menos eficientes en términos de recursos si la longitud del mensaje es mayor que el tamaño máximo permitido. |
 
 
 
