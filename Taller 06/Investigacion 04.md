@@ -3,7 +3,7 @@
 ## Para esta practica, profundice lo hablado en clase. Investigue los siguientes tópicos y de su opinión:
 
 ## 1. Describa dos ejemplos en los que los mecanismos multihilo no proporcionen un mejor rendimiento que el monohilo.
-
+-
 ## 2. Describa las acciones que toma una biblioteca de hilos para cambiar el contexto entre hilos de nivel de usuario.
 
 ## 3. Los valores de los registros son componentes del estado de un programa, se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
