@@ -3,19 +3,28 @@
 ## Para esta practica, profundice lo hablado en clase. Investigue los siguientes tópicos y de su opinión:
 
 ## 1. Describa dos ejemplos en los que los mecanismos multihilo no proporcionen un mejor rendimiento que el monohilo.
--
+***-Aplicaciones con cuellos de botella de recursos compartidos:*** En algunas aplicaciones, hay recursos críticos compartidos, como bases de datos o archivos de configuración, que solo pueden ser accedidos por un hilo a la vez. Si se usan varios hilos para acceder a estos recursos compartidos, puede haber bloqueos y esperas innecesarias que reduzcan el rendimiento general. Es más eficiente utilizar un solo hilo para administrar el acceso a los recursos compartidos y permitir que los demás hilos realicen otras tareas que no requieran acceso a esos recursos.
+
+***-Procesos de E/S intensiva:*** En algunas aplicaciones, la mayor parte del tiempo se dedica a esperar que se completen operaciones de E/S, como leer datos de un disco duro. En estos casos, agregar más hilos no mejorará el rendimiento y puede incluso disminuirlo debido a la sobrecarga de cambio de contexto y sincronización entre los hilos. Es más eficiente utilizar un solo hilo y dejar que el sistema operativo maneje las operaciones de E/S en segundo plano.
 ## 2. Describa las acciones que toma una biblioteca de hilos para cambiar el contexto entre hilos de nivel de usuario.
+-Cuando se produce un cambio de contexto entre hilos de nivel de usuario, la biblioteca toma varias acciones para asegurarse de que el proceso se ejecute de manera eficiente. Primero, la biblioteca guarda el estado actual del hilo que se está suspendiendo, incluyendo los valores de los registros y la pila. Luego, selecciona el siguiente hilo a ejecutar, basándose en una política de planificación específica, y restaura el estado del nuevo hilo. Después, actualiza las estructuras de datos del hilo y del proceso para reflejar el cambio de contexto y el nuevo estado del hilo. Finalmente, devuelve el control al nuevo hilo, que se ejecuta a partir del punto donde se suspendió anteriormente. Todo este proceso se repite cada vez que se produce un cambio de contexto entre hilos de nivel de usuario en un programa multihilo.
 
 ## 3. Los valores de los registros son componentes del estado de un programa, se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
+- No, los valores de registro no se comparten entre los hilos de un proceso multihilo. Cada hilo tiene su propia copia de los registros de la CPU, lo que permite que cada hilo tenga su propio estado independiente de los demás hilos en el proceso multihilo.
 
 ## 4. Los cúmulos de memoria se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
-
+- Si, todos los hilos tienen acceso a la misma porción de memoria del proceso que se utiliza para almacenar datos dinámicos. Esto permite que los hilos compartan información y trabajen juntos en una tarea común.
 ## 5. Las variables globales se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
-
+- Si, cualquier hilo puede acceder y modificar las variables globales. Sin embargo, si varios hilos intentan acceder y modificar la misma variable global al mismo tiempo, puede haber problemas de concurrencia y se deben tomar medidas para garantizar la consistencia de los datos compartidos.
 ## 6. La memoria de pila se comparten entre los hilos de un proceso multihilo? Si, no y porqué?
-
+- No, Cada hilo tiene su propia pila de llamadas, que se utiliza para llevar un registro de las funciones que se llaman y las variables que se utilizan en esas funciones.
 ## 7. En que ocasiones una solución multihilo que usa múltiples hilos del kernel proporciona mejor rendimiento que un solo hilo sobre un sistema monoprocesador.
+1- Aplicaciones con tareas intensivas de CPU: si una aplicación tiene una gran cantidad de tareas que requieren mucho procesamiento de CPU, la capacidad de ejecutar varias tareas en paralelo a través de múltiples hilos puede aumentar significativamente el rendimiento.
 
+2- Entrada/salida intensiva: si una aplicación realiza muchas operaciones de entrada/salida (I/O), como leer/escribir archivos, realizar solicitudes de red o interactuar con dispositivos de E/S, los hilos adicionales pueden aprovechar los tiempos de espera de I/O para realizar otras tareas, mejorando la eficiencia.
+
+3- Carga de trabajo con bloqueos y esperas: si una aplicación tiene secciones de código que requieren bloqueos y esperas para acceder a recursos compartidos, la utilización de múltiples hilos puede permitir que otros hilos realicen trabajo adicional durante esos períodos de espera, lo que puede reducir el tiempo total de ejecución.
 ## 8. Puede una solución multihilo que utiliza múltiples hilos de usuario conseguir mejor rendimiento en un sistema multiprocesador que en un sistema de un solo procesador?
-
+- Si, En un sistema multiprocesador, varios procesadores trabajan juntos para realizar las tareas, permitiendo que varios hilos se ejecuten en paralelo en diferentes procesadores. Por otro lado, en un sistema de un solo procesador, varios hilos de usuario aún se ejecutan en serie en un solo núcleo de CPU, lo que puede limitar el rendimiento en comparación con un sistema multiprocesador. En resumen, en un sistema multiprocesador, se puede lograr una mayor utilización de los recursos del hardware, lo que puede resultar en una mayor eficiencia en la ejecución de tareas en paralelo.
 ## 9. Suponga que el numero de hilos del usuario es mayor que el numero de procesadores del sistema. Explique el impacto sobre el rendimiento cuando el numero de hilos del kernel asignados al programa es menor que el numero de procesadores.
+- puede variar en función de la naturaleza de la carga de trabajo del programa. Si el programa tiene tareas intensivas de CPU que requieren mucho procesamiento, es posible que una solución con menos hilos del kernel no afecte significativamente el rendimiento, ya que los procesadores activos pueden estar completamente dedicados a esas tareas.
