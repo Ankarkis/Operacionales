@@ -23,10 +23,10 @@ def liberar_exclusion_mutua():
     lock = 0
 
 ## 6. Los servidores pueden diseñarse de modo que limiten el numero de conexiones abiertas. Explique cómo puede utilizar un servidor los semáforos para limitar el numero de conexiones concurrentes.
-- 
+-  El semáforo se decrementa cuando se establece una conexión y se incrementa cuando una conexión se cierra, garantizando así que no se exceda el límite establecido. El uso de semáforos proporciona una forma efectiva de gestionar y limitar el número de conexiones que un servidor puede manejar simultáneamente.
 ## 7. Demuestre que los monitores y semáforos son equivalentes, en cuanto a que se pueden emplear para implementar los mismos tipos de problemas de sincronización.
-- 
+- Los monitores y los semáforos son equivalentes en el sentido de que ambos pueden ser utilizados para implementar los mismos tipos de problemas de sincronización. Ambos mecanismos proporcionan un enfoque para garantizar la exclusión mutua y la sincronización entre los procesos o hilos en un entorno concurrente.
 ## 8. La exclusión mutua estricta en un monitor hace que el monitor de búfer limitado sea adecuado para porciones pequeñas. Explique por qué es cierto esto.
-- 
+-  la exclusión mutua estricta en un monitor hace que el monitor de búfer limitado sea adecuado para porciones pequeñas debido a la garantía de exclusión mutua que permite la ejecución secuencial de operaciones en el búfer. Esto funciona bien cuando las operaciones de inserción y eliminación son rápidas y no generan tiempos de espera prolongados para otros hilos.
 ## 9. Por qué Windows y Linux utilizan bloqueos mediante bucle sin fin como mecanismo de sincronización solo en los sistemas multiprocesador y no en los sistemas monoprocesador?
-- 
+- los bloqueos mediante bucle sin fin se utilizan en sistemas multiprocesador porque se pueden aprovechar mejor los recursos disponibles y existen mecanismos de sincronización más adecuados. En sistemas monoprocesador, donde solo hay un único núcleo, los bloqueos mediante bucle sin fin no son apropiados, ya que pueden afectar negativamente el rendimiento del sistema al ocupar el único recurso de procesamiento disponible.
