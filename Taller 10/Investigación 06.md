@@ -1,5 +1,5 @@
-# Investigación
-## Para esta practica, profundice lo hablado en clase. Investigue los siguientes tópicos y de su opinión:
+# ***```Investigación```***
+## ***Para esta practica, profundice lo hablado en clase. Investigue los siguientes tópicos y de su opinión:***
 ![image](https://github.com/Ankarkis/Operacionales/assets/83093835/c3d118bc-afb3-4dd2-b7be-0040bde11477)
 
 ## 1. Considere la imagen, demuestre que las cuatro condiciones necesarias para que se produzca un interbloqueo se cumplen.
