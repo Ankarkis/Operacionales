@@ -1,11 +1,27 @@
-# ***```Investigación```***
+# ***```Investigación 06```***
 ## ***Para esta practica, profundice lo hablado en clase. Investigue los siguientes tópicos y de su opinión:***
 ![image](https://github.com/Ankarkis/Operacionales/assets/83093835/c3d118bc-afb3-4dd2-b7be-0040bde11477)
 
 ## 1. Considere la imagen, demuestre que las cuatro condiciones necesarias para que se produzca un interbloqueo se cumplen.
--
+- Exclusión mutua: Cada vehículo en la imagen ocupa su propio carril sin compartirlo con otros.
+
+Explicación: En la imagen, los vehículos se encuentran en carriles separados, sin invadir el espacio del otro.
+
+- Espera de retención: Los vehículos mantienen su carril actual mientras esperan el acceso a otro carril.
+
+Explicación: En la imagen, los vehículos se mantienen en sus carriles, pero al mismo tiempo esperan que el carril siguiente esté disponible para avanzar.
+
+- No preempción: Los carriles ocupados por un vehículo no pueden ser obligados a ser liberados.
+
+Explicación: En la imagen, los vehículos no pueden ser forzados a abandonar su carril actual antes de que se les dé acceso al siguiente carril.
+
+- Espera circular: Cada vehículo está esperando a que otro libere un recurso.
+
+Explicación: En la imagen, los vehículos forman una especie de "cola" donde cada uno está esperando que el vehículo delante de él se mueva para poder avanzar.
 ## 2. Considere la imagen, enuncie una regla simple para evitar los interbloqueos en este sistema.
--
+- para prevenir los interbloqueos en este sistema consistiría en implementar un semáforo o una señal de control que regule el movimiento de los vehículos. Esta medida garantizaría que únicamente un carril pueda avanzar en un determinado momento.
+
+Explicación: Para evitar que los vehículos se bloqueen unos a otros, se propone la instalación de un semáforo o una señal de control en el sistema. Esta medida permitiría regular el flujo de los vehículos, asegurando que solo un carril tenga permiso para avanzar mientras los demás esperan su turno. De esta manera, se evita la situación en la que varios vehículos intentan avanzar al mismo tiempo y se crean bloqueos en la circulación. Esta estrategia proporciona una solución efectiva y sencilla para mantener el tráfico fluido y prevenir los interbloqueos en el sistema.
 ## 3. Explique como se cumplen las condiciones básicas de interbloqueo en el problema de la cena de los filósofos.
 - En el problema de la cena de los filósofos, las condiciones básicas de interbloqueo se cumplen debido a que los filósofos necesitan dos palillos para comer. Esto crea una situación en la que todos los filósofos pueden tomar un palillo pero no pueden continuar hasta que tengan el segundo palillo. Si todos los filósofos toman un palillo y esperan por el otro palillo que está siendo retenido por otro filósofo, se produce un interbloqueo.
 ## 4. Explique como podría evitarse los interbloqueos impidiendo que se cumpla una de las condiciones en el problema de la cena de los filósofos.
